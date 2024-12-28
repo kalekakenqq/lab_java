@@ -9,7 +9,21 @@ public class LabSorter {
      * @return отсортированный массив
      */
     public int[] sort(int[] source) {
-
-        throw new RuntimeException("implement me");
+        boolean sorted = false;
+   
+        while (!sorted) {
+            sorted = true;
+   
+            for (int i = 0; i < source.length - 1; i++) {
+                if (source[i] > source[i+1]) {
+                    int temp = source[i];
+                    source[i] = source[i+1];
+                    source[i+1] = temp;
+                    sorted = false;
+   
+                }
+            }
+        }
+        return source;
     }
 }
